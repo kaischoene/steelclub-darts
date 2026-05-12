@@ -1,0 +1,76 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html, body, #root {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  background: #FFFFFF;
+  color: #0F0F0F;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+* {
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* Hide scrollbars on horizontal scroll containers */
+.scroll-hide::-webkit-scrollbar {
+  display: none;
+}
+.scroll-hide {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+/* Subtle diagonal background accent */
+.bg-accent-lines {
+  background-image:
+    linear-gradient(115deg, transparent 0%, transparent 60%, rgba(0,0,0,0.025) 61%, rgba(0,0,0,0.025) 63%, transparent 64%),
+    linear-gradient(115deg, transparent 0%, transparent 75%, rgba(0,0,0,0.02) 76%, rgba(0,0,0,0.02) 77%, transparent 78%);
+}
+
+/* Leaflet overrides for light mode */
+.leaflet-container {
+  background: #F5F5F7;
+  font-family: 'Inter', sans-serif;
+}
+.leaflet-popup-content-wrapper {
+  border-radius: 16px;
+  box-shadow: 0 12px 32px rgba(0,0,0,0.12);
+  padding: 4px;
+}
+.leaflet-popup-tip {
+  box-shadow: none;
+}
+.leaflet-control-attribution {
+  background: rgba(255,255,255,0.7) !important;
+  font-size: 9px !important;
+}
+
+/* Custom pin shadow */
+.pin-shadow {
+  filter: drop-shadow(0 4px 8px rgba(0,0,0,0.18));
+}
+
+/* Tabular numbers for stats */
+.tabular {
+  font-variant-numeric: tabular-nums;
+}
+
+/* Smooth scroll snapping for carousels */
+.snap-x {
+  scroll-snap-type: x mandatory;
+}
+.snap-start {
+  scroll-snap-align: start;
+}
