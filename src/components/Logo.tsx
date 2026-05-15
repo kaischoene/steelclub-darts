@@ -13,15 +13,15 @@ export function Logo({ variant = "full", className = "" }: LogoProps) {
   const heights: Record<Exclude<LogoVariant, "icon">, string> = {
     full: "h-36",
     stacked: "h-32",
-    "horizontal-small": "h-16",
+    "horizontal-small": "h-12",
     white: "h-20",
   };
 
   return (
     <img
-      src="/img/logo.png"
-      alt="Steel Club Darts"
-      className={`${heights[variant]} w-auto select-none ${variant === "white" ? "invert brightness-200" : ""} ${className}`}
+      src="/img/icon-darts-logo.png"
+      alt="THE ICON DARTS"
+      className={`${heights[variant]} w-auto select-none object-contain ${className}`}
       draggable={false}
     />
   );
@@ -29,15 +29,11 @@ export function Logo({ variant = "full", className = "" }: LogoProps) {
 
 export function LogoIcon({ className = "" }: { className?: string }) {
   return (
-    <div
-      role="img"
-      aria-label="Steel Club Darts Icon"
-      className={`${className} aspect-square inline-block bg-no-repeat`}
-      style={{
-        backgroundImage: "url(/img/logo.png)",
-        backgroundSize: "auto 100%",
-        backgroundPosition: "0% center",
-      }}
+    <img
+      src="/img/icon-darts-logo.png"
+      alt="THE ICON DARTS"
+      className={`${className} object-contain select-none`}
+      draggable={false}
     />
   );
 }

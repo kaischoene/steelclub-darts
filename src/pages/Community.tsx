@@ -39,7 +39,7 @@ export default function Community() {
       {/* FRIENDS */}
       <section className="mt-6 px-4">
         <h2 className="text-lg font-black text-ink mb-3 tracking-tight">Freunde</h2>
-        <div className="bg-white border border-black/[0.06] rounded-3xl shadow-soft overflow-hidden divide-y divide-black/[0.04]">
+        <div className="bg-bg-surface border border-white/10 rounded-3xl shadow-soft overflow-hidden divide-y divide-white/[0.05]">
           {friends.map((f) => (
             <div key={f.id} className="flex items-center gap-3 p-3">
               <Link to={`/spieler/${f.slug}`} className="relative flex-shrink-0">
@@ -72,7 +72,7 @@ export default function Community() {
         <h2 className="text-lg font-black text-ink mb-3 tracking-tight">Aktive Herausforderungen</h2>
         <div className="grid grid-cols-2 gap-3">
           {challenges.map((c, i) => (
-            <div key={i} className="bg-white border border-black/[0.06] rounded-2xl p-4 shadow-soft">
+            <div key={i} className="bg-bg-surface border border-white/10 rounded-2xl p-4 shadow-soft">
               <p className="text-xs text-ink-mid">{c.mode}</p>
               <p className="text-sm font-semibold text-ink mt-0.5">vs. {c.opponent}</p>
               <p className="text-3xl font-black text-orange mt-3 tabular">{c.score}</p>
@@ -87,7 +87,7 @@ export default function Community() {
           <Activity size={18} />
           Aktivitäts-Feed
         </h2>
-        <div className="bg-white border border-black/[0.06] rounded-3xl shadow-soft divide-y divide-black/[0.04]">
+        <div className="bg-bg-surface border border-white/10 rounded-3xl shadow-soft divide-y divide-white/[0.05]">
           {activities.map((a, i) => (
             <div key={i} className="flex items-start gap-3 p-3.5">
               <div className="w-2 h-2 rounded-full bg-orange mt-2 flex-shrink-0" />
@@ -108,7 +108,7 @@ export default function Community() {
           <Trophy size={18} />
           Punkte-Rangliste
         </h2>
-        <div className="bg-white border border-black/[0.06] rounded-3xl shadow-soft overflow-hidden divide-y divide-black/[0.04]">
+        <div className="bg-bg-surface border border-white/10 rounded-3xl shadow-soft overflow-hidden divide-y divide-white/[0.05]">
           {leaderboard.map((p, i) => (
             <div key={p.name} className="flex items-center gap-3 px-4 py-3">
               <span className={`w-6 font-black ${i < 3 ? "text-orange" : "text-ink-mid"}`}>{i + 1}.</span>

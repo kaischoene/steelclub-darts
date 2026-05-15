@@ -78,9 +78,9 @@ export default function Home() {
         <div className="grid grid-cols-3 gap-3">
           <Link
             to="/scorer"
-            className="group flex flex-col items-center justify-center bg-white border border-black/[0.06] rounded-2xl py-4 shadow-card hover:shadow-elevated hover:-translate-y-1 transition-all"
+            className="group flex flex-col items-center justify-center bg-bg-surface border border-white/10 rounded-2xl py-4 shadow-card hover:shadow-elevated hover:-translate-y-1 transition-all"
           >
-            <div className="w-11 h-11 rounded-xl bg-orange/10 flex items-center justify-center mb-2 group-hover:bg-orange/20 transition-colors">
+            <div className="w-11 h-11 rounded-xl bg-purple/15 flex items-center justify-center mb-2 group-hover:bg-purple/25 transition-colors">
               <Target size={22} className="text-orange" strokeWidth={2.5} />
             </div>
             <span className="font-bold text-xs text-ink">KI-Scorer</span>
@@ -88,9 +88,9 @@ export default function Home() {
           </Link>
           <Link
             to="/community"
-            className="group flex flex-col items-center justify-center bg-white border border-black/[0.06] rounded-2xl py-4 shadow-card hover:shadow-elevated hover:-translate-y-1 transition-all"
+            className="group flex flex-col items-center justify-center bg-bg-surface border border-white/10 rounded-2xl py-4 shadow-card hover:shadow-elevated hover:-translate-y-1 transition-all"
           >
-            <div className="w-11 h-11 rounded-xl bg-orange/10 flex items-center justify-center mb-2 group-hover:bg-orange/20 transition-colors">
+            <div className="w-11 h-11 rounded-xl bg-purple/15 flex items-center justify-center mb-2 group-hover:bg-purple/25 transition-colors">
               <UsersIcon size={22} className="text-orange" strokeWidth={2.5} />
             </div>
             <span className="font-bold text-xs text-ink">Community</span>
@@ -100,7 +100,7 @@ export default function Home() {
             to="/malle-pally"
             className="group relative flex flex-col items-center justify-center bg-gradient-to-br from-orange to-orange-dark rounded-2xl py-4 shadow-orange hover:shadow-orange-strong hover:-translate-y-1 transition-all overflow-hidden"
           >
-            <div className="w-11 h-11 rounded-xl bg-white/20 backdrop-blur flex items-center justify-center mb-2">
+            <div className="w-11 h-11 rounded-xl bg-bg-surface/20 backdrop-blur flex items-center justify-center mb-2">
               <RadioIcon size={22} className="text-white" strokeWidth={2.5} />
             </div>
             <span className="font-bold text-xs text-white">Malle Pally</span>
@@ -153,7 +153,7 @@ export default function Home() {
             Vollkarte <ChevronRight size={16} />
           </Link>
         </div>
-        <div className="relative rounded-3xl overflow-hidden border border-black/[0.06] shadow-card h-[320px]">
+        <div className="relative rounded-3xl overflow-hidden border border-white/10 shadow-card h-[320px]">
           <MapContainer
             center={[51.16, 10.45]}
             zoom={5.5}
@@ -162,7 +162,7 @@ export default function Home() {
             attributionControl={false}
             style={{ width: "100%", height: "100%" }}
           >
-            <TileLayer url="https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png" />
+            <TileLayer url="https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png" />
             {events.filter(e => e.lat > 47 && e.lat < 55 && e.lng > 5 && e.lng < 16).map((event) => (
               <Marker
                 key={event.id}
@@ -183,7 +183,7 @@ export default function Home() {
           </MapContainer>
 
           {/* Legend overlay */}
-          <div className="absolute top-3 left-3 bg-white/95 backdrop-blur-md rounded-2xl shadow-card p-3 border border-black/[0.06]">
+          <div className="absolute top-3 left-3 bg-bg-surface/95 backdrop-blur-md rounded-2xl shadow-card p-3 border border-white/10">
             <div className="flex items-center gap-1.5 text-[10px] mb-1.5">
               <span className="w-2.5 h-2.5 rounded-full bg-orange" />
               <span className="font-semibold text-ink">Profi</span>

@@ -31,15 +31,15 @@ export default function NewsDetail() {
         <div className="absolute top-0 left-0 right-0 flex items-center justify-between p-4 pt-6">
           <button
             onClick={() => window.history.back()}
-            className="w-10 h-10 rounded-full bg-white/90 backdrop-blur flex items-center justify-center shadow-soft active:scale-95"
+            className="w-10 h-10 rounded-full bg-bg-surface/90 backdrop-blur flex items-center justify-center shadow-soft active:scale-95"
           >
             <ChevronLeft size={20} className="text-ink" strokeWidth={2.5} />
           </button>
           <div className="flex gap-2">
-            <button className="w-10 h-10 rounded-full bg-white/90 backdrop-blur flex items-center justify-center shadow-soft">
+            <button className="w-10 h-10 rounded-full bg-bg-surface/90 backdrop-blur flex items-center justify-center shadow-soft">
               <Heart size={18} className="text-ink" />
             </button>
-            <button className="w-10 h-10 rounded-full bg-white/90 backdrop-blur flex items-center justify-center shadow-soft">
+            <button className="w-10 h-10 rounded-full bg-bg-surface/90 backdrop-blur flex items-center justify-center shadow-soft">
               <Share2 size={18} className="text-ink" />
             </button>
           </div>
@@ -56,7 +56,7 @@ export default function NewsDetail() {
       </div>
 
       {/* META */}
-      <div className="px-4 py-5 flex items-center gap-3 border-b border-black/[0.06]">
+      <div className="px-4 py-5 flex items-center gap-3 border-b border-white/10">
         <img src={article.authorAvatar} alt={article.author} className="w-10 h-10 rounded-full ring-2 ring-orange/40" />
         <div className="flex-1">
           <p className="font-bold text-sm text-ink">{article.author}</p>

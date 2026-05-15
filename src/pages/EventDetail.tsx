@@ -43,15 +43,15 @@ export default function EventDetail() {
         <div className="absolute top-0 left-0 right-0 flex items-center justify-between p-4 pt-6">
           <button
             onClick={() => window.history.back()}
-            className="w-10 h-10 rounded-full bg-white/90 backdrop-blur flex items-center justify-center shadow-soft active:scale-95"
+            className="w-10 h-10 rounded-full bg-bg-surface/90 backdrop-blur flex items-center justify-center shadow-soft active:scale-95"
           >
             <ChevronLeft size={20} className="text-ink" strokeWidth={2.5} />
           </button>
           <div className="flex gap-2">
-            <button className="w-10 h-10 rounded-full bg-white/90 backdrop-blur flex items-center justify-center shadow-soft active:scale-95">
+            <button className="w-10 h-10 rounded-full bg-bg-surface/90 backdrop-blur flex items-center justify-center shadow-soft active:scale-95">
               <Heart size={18} className="text-ink" />
             </button>
-            <button className="w-10 h-10 rounded-full bg-white/90 backdrop-blur flex items-center justify-center shadow-soft active:scale-95">
+            <button className="w-10 h-10 rounded-full bg-bg-surface/90 backdrop-blur flex items-center justify-center shadow-soft active:scale-95">
               <Share2 size={18} className="text-ink" />
             </button>
           </div>
@@ -60,7 +60,7 @@ export default function EventDetail() {
 
       {/* INFO CARD (overlapping hero) */}
       <div className="relative -mt-16 px-4">
-        <div className="bg-white rounded-3xl shadow-elevated p-6 border border-black/[0.04]">
+        <div className="bg-bg-surface rounded-3xl shadow-elevated p-6 border border-white/[0.05]">
           <div className="mb-3"><LeagueBadge league={event.league} /></div>
           <h1 className="text-2xl font-black text-ink leading-tight tracking-tight">{event.title}</h1>
           <div className="mt-2 flex items-center gap-1.5 text-orange font-bold text-sm uppercase tracking-wider">
@@ -111,7 +111,7 @@ export default function EventDetail() {
       {/* ACCORDION */}
       <section className="px-4 mt-6 space-y-2">
         {sections.map((s) => (
-          <div key={s.id} className="bg-white border border-black/[0.06] rounded-2xl shadow-soft overflow-hidden">
+          <div key={s.id} className="bg-bg-surface border border-white/10 rounded-2xl shadow-soft overflow-hidden">
             <button
               onClick={() => setOpen(open === s.id ? null : s.id)}
               className="w-full px-5 py-4 flex items-center justify-between transition hover:bg-surface-gray"
@@ -128,21 +128,21 @@ export default function EventDetail() {
                   <div className="space-y-2">
                     <p><span className="font-semibold">Format:</span> {event.format}</p>
                     <p><span className="font-semibold">Preisgeld:</span> {event.prizeMoney.toLocaleString("de-DE")} €</p>
-                    <p><span className="font-semibold">Veranstalter:</span> Steel Club Darts</p>
-                    <p><span className="font-semibold">Sponsoren:</span> Steel Club Darts, Dr. Fischer, Kleinigkeit</p>
+                    <p><span className="font-semibold">Veranstalter:</span> THE ICON DARTS</p>
+                    <p><span className="font-semibold">Sponsoren:</span> THE ICON DARTS, Dr. Fischer, Kleinigkeit</p>
                   </div>
                 )}
                 {s.id === "schedule" && (
                   <div className="space-y-3">
-                    <div className="flex items-center justify-between py-2 border-b border-black/5">
+                    <div className="flex items-center justify-between py-2 border-b border-white/10">
                       <span>Einlass</span>
                       <span className="font-semibold text-ink">12:00 Uhr</span>
                     </div>
-                    <div className="flex items-center justify-between py-2 border-b border-black/5">
+                    <div className="flex items-center justify-between py-2 border-b border-white/10">
                       <span>Vorrunde</span>
                       <span className="font-semibold text-ink">14:00 Uhr</span>
                     </div>
-                    <div className="flex items-center justify-between py-2 border-b border-black/5">
+                    <div className="flex items-center justify-between py-2 border-b border-white/10">
                       <span>Halbfinale</span>
                       <span className="font-semibold text-ink">18:30 Uhr</span>
                     </div>
@@ -188,7 +188,7 @@ export default function EventDetail() {
         <h2 className="px-4 text-lg font-black text-ink tracking-tight mb-3">Ähnliche Events</h2>
         <div className="flex gap-3 overflow-x-auto scroll-hide snap-x scroll-pl-4 scroll-pr-4 px-4 pb-2">
           {events.filter(e => e.slug !== event.slug && e.league === event.league).slice(0, 4).map((e) => (
-            <Link key={e.id} to={`/events/${e.slug}`} className="w-[200px] flex-shrink-0 snap-start bg-white border border-black/[0.06] rounded-2xl shadow-card hover:shadow-elevated hover:-translate-y-1 transition-all overflow-hidden">
+            <Link key={e.id} to={`/events/${e.slug}`} className="w-[200px] flex-shrink-0 snap-start bg-bg-surface border border-white/10 rounded-2xl shadow-card hover:shadow-elevated hover:-translate-y-1 transition-all overflow-hidden">
               <div className="aspect-video overflow-hidden">
                 <img src={e.image} alt={e.title} className="w-full h-full object-cover" />
               </div>
@@ -202,12 +202,12 @@ export default function EventDetail() {
       </section>
 
       {/* STICKY BOTTOM CTA — sits ABOVE the BottomNav */}
-      <div className="fixed left-0 right-0 bg-ink p-4 z-40 shadow-elevated" style={{ bottom: 'calc(72px + env(safe-area-inset-bottom, 0px))' }}>
+      <div className="fixed left-0 right-0 bg-bg-base p-4 z-40 shadow-elevated" style={{ bottom: 'calc(72px + env(safe-area-inset-bottom, 0px))' }}>
         <div className="max-w-screen-lg mx-auto flex gap-3">
           <button className="flex-1 bg-orange hover:bg-orange-bright text-white font-bold py-3.5 rounded-pill shadow-orange transition active:scale-95">
             Tickets kaufen
           </button>
-          <button className="flex-1 border-2 border-white text-white font-bold py-3.5 rounded-pill transition active:scale-95 hover:bg-white hover:text-ink">
+          <button className="flex-1 border-2 border-white text-white font-bold py-3.5 rounded-pill transition active:scale-95 hover:bg-bg-surface hover:text-ink">
             Live ansehen
           </button>
         </div>

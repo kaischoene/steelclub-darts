@@ -18,7 +18,7 @@ export function TopBar({ showBack = false, title, rightSlot, transparent = false
       className={`sticky top-0 z-40 ${
         transparent
           ? "bg-transparent"
-          : "bg-white/85 backdrop-blur-xl border-b border-black/[0.06]"
+          : "bg-bg-surface/85 backdrop-blur-xl border-b border-white/10"
       }`}
     >
       <div className="flex items-center justify-between h-24 px-4 max-w-screen-lg mx-auto">
@@ -26,13 +26,13 @@ export function TopBar({ showBack = false, title, rightSlot, transparent = false
           {showBack ? (
             <button
               onClick={goBack}
-              className="w-10 h-10 rounded-full bg-white shadow-soft border border-black/[0.06] flex items-center justify-center hover:bg-surface-gray transition active:scale-95"
+              className="w-10 h-10 rounded-full bg-bg-surface shadow-soft border border-white/10 flex items-center justify-center hover:bg-surface-gray transition active:scale-95"
               aria-label="Zurück"
             >
               <ChevronLeft size={20} strokeWidth={2.5} className="text-ink" />
             </button>
           ) : (
-            <Link to="/" aria-label="Steel Club Darts Home">
+            <Link to="/" aria-label="THE ICON DARTS Home">
               <Logo variant="horizontal-small" />
             </Link>
           )}

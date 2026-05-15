@@ -9,7 +9,7 @@ interface AppShellProps {
 
 export function AppShell({ children, hideBottomNav = false, hasBottomBar = false }: AppShellProps) {
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-bg-surface">
       <main className={hasBottomBar ? "pb-44" : hideBottomNav ? "" : "pb-24"}>{children}</main>
       {!hideBottomNav && <BottomNav />}
     </div>

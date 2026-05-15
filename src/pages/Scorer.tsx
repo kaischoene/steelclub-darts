@@ -23,7 +23,7 @@ export default function Scorer() {
 
       {/* DARTBOARD */}
       <section className="px-4 mt-5">
-        <div className="relative aspect-square bg-ink rounded-3xl shadow-elevated overflow-hidden">
+        <div className="relative aspect-square bg-bg-base rounded-3xl shadow-elevated overflow-hidden">
           <img
             src="/img/products/professional-dartboard.jpg"
             alt="Dartboard"
@@ -44,7 +44,7 @@ export default function Scorer() {
           <button
             onClick={() => setCameraOn(!cameraOn)}
             className={`absolute top-4 right-4 w-12 h-12 rounded-full backdrop-blur-md flex items-center justify-center transition active:scale-95 ${
-              cameraOn ? "bg-orange shadow-orange" : "bg-white/20"
+              cameraOn ? "bg-orange shadow-orange" : "bg-bg-surface/20"
             }`}
           >
             <Camera size={20} className="text-white" />
@@ -75,11 +75,11 @@ export default function Scorer() {
           Spiel beenden & speichern
         </button>
         <div className="grid grid-cols-2 gap-3">
-          <button className="bg-white border border-black/[0.08] text-ink font-semibold py-3.5 rounded-pill flex items-center justify-center gap-2 transition active:scale-95 hover:bg-surface-gray">
+          <button className="bg-bg-surface border border-white/10 text-ink font-semibold py-3.5 rounded-pill flex items-center justify-center gap-2 transition active:scale-95 hover:bg-surface-gray">
             <RotateCcw size={16} />
             Wurf rückgängig
           </button>
-          <button className="bg-white border border-black/[0.08] text-ink font-semibold py-3.5 rounded-pill flex items-center justify-center gap-2 transition active:scale-95 hover:bg-surface-gray">
+          <button className="bg-bg-surface border border-white/10 text-ink font-semibold py-3.5 rounded-pill flex items-center justify-center gap-2 transition active:scale-95 hover:bg-surface-gray">
             <TrendingUp size={16} />
             Statistik
           </button>
@@ -93,7 +93,7 @@ export default function Scorer() {
           {[60, 45, 26, 100, 140, 180, 81, "BUST"].map((v) => (
             <button
               key={v}
-              className="bg-white border border-black/[0.08] rounded-xl py-3 font-bold text-ink active:scale-95 transition shadow-soft hover:shadow-card"
+              className="bg-bg-surface border border-white/10 rounded-xl py-3 font-bold text-ink active:scale-95 transition shadow-soft hover:shadow-card"
             >
               {v}
             </button>
@@ -108,8 +108,8 @@ export default function Scorer() {
 
 function ScoreBox({ label, score, legs, active }: { label: string; score: number; legs: number; active: boolean }) {
   return (
-    <div className={`bg-white border-2 rounded-3xl p-5 transition-all ${
-      active ? "border-orange shadow-orange" : "border-black/[0.06] shadow-soft"
+    <div className={`bg-bg-surface border-2 rounded-3xl p-5 transition-all ${
+      active ? "border-orange shadow-orange" : "border-white/10 shadow-soft"
     }`}>
       <div className="flex items-center justify-between">
         <p className={`text-xs font-bold uppercase tracking-wider ${active ? "text-orange" : "text-ink-mid"}`}>{label}</p>
@@ -123,7 +123,7 @@ function ScoreBox({ label, score, legs, active }: { label: string; score: number
 
 function StatTile({ label, value }: { label: string; value: string }) {
   return (
-    <div className="bg-white border border-black/[0.06] rounded-2xl p-3 text-center shadow-soft">
+    <div className="bg-bg-surface border border-white/10 rounded-2xl p-3 text-center shadow-soft">
       <p className="text-[11px] text-ink-mid font-semibold uppercase tracking-wider">{label}</p>
       <p className="text-2xl font-black text-ink mt-1 tabular">{value}</p>
     </div>

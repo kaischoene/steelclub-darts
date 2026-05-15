@@ -48,7 +48,7 @@ export const news: NewsArticle[] = [
     dateLabel: "vor 6 Tagen",
     readTime: "6 Min Lesezeit",
     excerpt: "Der deutsche Dart-Star Max Hopp eröffnet sein eigenes Trainingscamp in Heiligenroth und bietet exklusive Workshops für ambitionierte Spieler.",
-    content: "Max Hopp eröffnet in Heiligenroth sein eigenes Trainingscamp. Im hochmodernen Steel Club Media Room mit 5 Wettkampf-Boards, Lichtringen und automatischem Zählsystem bietet er ab sofort exklusive Workshops für ambitionierte Hobbyspieler und aufstrebende Profis an.\n\n'Es ist mein Herzensprojekt', so Hopp. 'Ich möchte die nächste Generation deutscher Dartspieler fördern und das Niveau in unserem Land auf ein neues Level heben.'",
+    content: "Max Hopp eröffnet in Heiligenroth sein eigenes Trainingscamp. Im hochmodernen Icon Media Room mit 5 Wettkampf-Boards, Lichtringen und automatischem Zählsystem bietet er ab sofort exklusive Workshops für ambitionierte Hobbyspieler und aufstrebende Profis an.\n\n'Es ist mein Herzensprojekt', so Hopp. 'Ich möchte die nächste Generation deutscher Dartspieler fördern und das Niveau in unserem Land auf ein neues Level heben.'",
     tags: ["Max Hopp", "Training", "Heiligenroth"],
   },
   {
@@ -70,7 +70,7 @@ export const news: NewsArticle[] = [
   {
     id: 4,
     slug: "neue-darts-kollektion",
-    title: "Steel Club launcht neue Performance-Kollektion",
+    title: "Icon launcht neue Performance-Kollektion",
     category: "Equipment",
     image: img("neue-darts-kollektion"),
     heroImage: img("neue-darts-kollektion"),
@@ -79,9 +79,9 @@ export const news: NewsArticle[] = [
     date: "2026-04-28",
     dateLabel: "vor 13 Tagen",
     readTime: "5 Min Lesezeit",
-    excerpt: "Die neue Steel Club Performance-Kollektion ist da: Wettkampf-Darts und Premium-Apparel im modernen Design.",
-    content: "Mit der neuen Performance-Kollektion setzt Steel Club Darts neue Maßstäbe. Die Wettkampf-Darts aus 95% Tungsten wurden in Zusammenarbeit mit Max Hopp entwickelt und garantieren Präzision auf höchstem Niveau.\n\nErgänzt wird die Kollektion durch atmungsaktive Performance-Polos, funktionale Hoodies und stylische Caps – alles im Steel Club Design.",
-    tags: ["Equipment", "Launch", "Steel Club"],
+    excerpt: "Die neue Icon Performance-Kollektion ist da: Wettkampf-Darts und Premium-Apparel im modernen Design.",
+    content: "Mit der neuen Performance-Kollektion setzt THE ICON DARTS neue Maßstäbe. Die Wettkampf-Darts aus 95% Tungsten wurden in Zusammenarbeit mit Max Hopp entwickelt und garantieren Präzision auf höchstem Niveau.\n\nErgänzt wird die Kollektion durch atmungsaktive Performance-Polos, funktionale Hoodies und stylische Caps – alles im Icon Design.",
+    tags: ["Equipment", "Launch", "Icon"],
   },
   {
     id: 5,
@@ -96,7 +96,7 @@ export const news: NewsArticle[] = [
     dateLabel: "vor 16 Tagen",
     readTime: "10 Min Lesezeit",
     excerpt: "Vom Hobbyspieler in die A-Klasse: Maximilian Müller spricht über seinen rasanten Aufstieg im deutschen Dartsport.",
-    content: "Maximilian Müller ist der Shootingstar der deutschen A-Klasse. Im Interview spricht er über Training, Druck und seine Ziele für die kommende Saison.\n\n'Ich war drei Jahre lang reiner Hobbyspieler, bis ich gemerkt habe, dass mehr in mir steckt. Das Steel Club Ökosystem hat mir die Tür zur professionellen Dart-Welt geöffnet.'",
+    content: "Maximilian Müller ist der Shootingstar der deutschen A-Klasse. Im Interview spricht er über Training, Druck und seine Ziele für die kommende Saison.\n\n'Ich war drei Jahre lang reiner Hobbyspieler, bis ich gemerkt habe, dass mehr in mir steckt. Das Icon Ökosystem hat mir die Tür zur professionellen Dart-Welt geöffnet.'",
     tags: ["Interview", "Müller", "A-Klasse"],
   },
   {
@@ -111,8 +111,8 @@ export const news: NewsArticle[] = [
     date: "2026-04-20",
     dateLabel: "vor 21 Tagen",
     readTime: "7 Min Lesezeit",
-    excerpt: "Das Steel Club Team präsentiert das große KI-Scorer Update mit verbesserter Treffer-Erkennung.",
-    content: "Mit dem KI-Scorer 2.0 hebt Steel Club Darts das automatische Zählen auf ein neues Level. Die neue Version erkennt Treffer mit einer Präzision von über 99% – ganz ohne teure Hardware oder spezielle Boards.\n\nEinfach das Smartphone aufstellen, App starten und losspielen. Der KI-Scorer übernimmt die Zählung in Echtzeit.",
+    excerpt: "Das Icon Team präsentiert das große KI-Scorer Update mit verbesserter Treffer-Erkennung.",
+    content: "Mit dem KI-Scorer 2.0 hebt THE ICON DARTS das automatische Zählen auf ein neues Level. Die neue Version erkennt Treffer mit einer Präzision von über 99% – ganz ohne teure Hardware oder spezielle Boards.\n\nEinfach das Smartphone aufstellen, App starten und losspielen. Der KI-Scorer übernimmt die Zählung in Echtzeit.",
     tags: ["KI-Scorer", "Update", "App"],
   },
 ];

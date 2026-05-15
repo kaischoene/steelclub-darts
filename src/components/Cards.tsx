@@ -21,7 +21,7 @@ export function LeagueBadge({ league }: { league: string }) {
     "A-Klasse": "bg-amber-400 text-white",
     "B-Klasse": "bg-ink-mid text-white",
     "C-Klasse": "bg-ink-light text-white",
-    "NDL": "bg-ink text-white",
+    "NDL": "bg-bg-base text-white",
   };
   return (
     <span className={`inline-flex items-center px-2.5 py-1 rounded-pill text-[10px] font-bold uppercase tracking-wider ${colors[league] || "bg-ink-mid text-white"}`}>
@@ -35,9 +35,9 @@ export function EventCard({ event, compact = false }: { event: DartEvent; compac
     return (
       <Link
         to={`/events/${event.slug}`}
-        className="group block w-[240px] flex-shrink-0 snap-start bg-white rounded-2xl border border-black/[0.06] shadow-card hover:shadow-elevated hover:-translate-y-1 transition-all p-4"
+        className="group block w-[240px] flex-shrink-0 snap-start bg-bg-surface rounded-2xl border border-white/10 shadow-card hover:shadow-elevated hover:-translate-y-1 transition-all p-4"
       >
-        <div className="w-11 h-11 rounded-xl bg-orange/10 flex items-center justify-center mb-3">
+        <div className="w-11 h-11 rounded-xl bg-purple/15 flex items-center justify-center mb-3">
           <img
             src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23FF7A00' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'><circle cx='12' cy='12' r='10'/><circle cx='12' cy='12' r='6'/><circle cx='12' cy='12' r='2'/></svg>"
             className="w-6 h-6"
@@ -63,7 +63,7 @@ export function EventCard({ event, compact = false }: { event: DartEvent; compac
   return (
     <Link
       to={`/events/${event.slug}`}
-      className="group block bg-white rounded-2xl border border-black/[0.06] shadow-card hover:shadow-elevated hover:-translate-y-1 transition-all overflow-hidden"
+      className="group block bg-bg-surface rounded-2xl border border-white/10 shadow-card hover:shadow-elevated hover:-translate-y-1 transition-all overflow-hidden"
     >
       <div className="relative aspect-[16/10] overflow-hidden">
         <img src={event.image} alt={event.title} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
@@ -114,7 +114,7 @@ export function NewsCard({ article, compact = false }: { article: NewsArticle; c
   return (
     <Link
       to={`/news/${article.slug}`}
-      className={`group block bg-white rounded-2xl border border-black/[0.06] shadow-card hover:shadow-elevated hover:-translate-y-1 transition-all overflow-hidden ${
+      className={`group block bg-bg-surface rounded-2xl border border-white/10 shadow-card hover:shadow-elevated hover:-translate-y-1 transition-all overflow-hidden ${
         compact ? "w-[280px] flex-shrink-0 snap-start" : ""
       }`}
     >
@@ -144,11 +144,11 @@ export function ProductCard({ product }: { product: Product }) {
   return (
     <Link
       to={`/produkt/${product.slug}`}
-      className="group block bg-white rounded-2xl border border-black/[0.06] shadow-card hover:shadow-elevated hover:-translate-y-1 transition-all overflow-hidden"
+      className="group block bg-bg-surface rounded-2xl border border-white/10 shadow-card hover:shadow-elevated hover:-translate-y-1 transition-all overflow-hidden"
     >
       <div className="relative aspect-square overflow-hidden bg-surface-gray">
         <img src={product.image} alt={product.name} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
-        <button className="absolute top-2 right-2 w-9 h-9 rounded-full bg-white/90 backdrop-blur flex items-center justify-center shadow-soft hover:bg-white transition" onClick={(e) => e.preventDefault()}>
+        <button className="absolute top-2 right-2 w-9 h-9 rounded-full bg-bg-surface/90 backdrop-blur flex items-center justify-center shadow-soft hover:bg-bg-surface transition" onClick={(e) => e.preventDefault()}>
           <Heart size={16} className="text-ink-mid" />
         </button>
         {product.maxHoppRecommended && (
@@ -170,7 +170,7 @@ export function StreamCard({ stream, large = false }: { stream: Stream; large?: 
     return (
       <Link
         to={`/streaming/${stream.slug}`}
-        className="group block relative rounded-3xl overflow-hidden shadow-elevated bg-ink"
+        className="group block relative rounded-3xl overflow-hidden shadow-elevated bg-bg-base"
       >
         <div className="aspect-[16/10] overflow-hidden">
           <img src={stream.thumbnail} alt={stream.title} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
@@ -179,7 +179,7 @@ export function StreamCard({ stream, large = false }: { stream: Stream; large?: 
 
         {stream.isLive && (
           <div className="absolute top-4 left-4 flex items-center gap-1.5 bg-live text-white px-2.5 py-1 rounded-md text-[11px] font-bold uppercase tracking-wider">
-            <span className="w-1.5 h-1.5 rounded-full bg-white animate-pulse-dot" />
+            <span className="w-1.5 h-1.5 rounded-full bg-bg-surface animate-pulse-dot" />
             LIVE
           </div>
         )}
@@ -192,7 +192,7 @@ export function StreamCard({ stream, large = false }: { stream: Stream; large?: 
         )}
 
         <div className="absolute inset-0 flex items-center justify-center">
-          <div className="w-20 h-20 rounded-full bg-white/20 backdrop-blur-xl border border-white/40 flex items-center justify-center group-hover:scale-110 group-hover:bg-white/30 transition-all shadow-2xl">
+          <div className="w-20 h-20 rounded-full bg-bg-surface/20 backdrop-blur-xl border border-white/40 flex items-center justify-center group-hover:scale-110 group-hover:bg-bg-surface/30 transition-all shadow-2xl">
             <Play size={32} className="text-white ml-1" fill="white" />
           </div>
         </div>
@@ -221,7 +221,7 @@ export function StreamCard({ stream, large = false }: { stream: Stream; large?: 
       to={`/streaming/${stream.slug}`}
       className="group block w-[240px] flex-shrink-0 snap-start"
     >
-      <div className="relative aspect-video rounded-2xl overflow-hidden bg-ink shadow-card group-hover:shadow-elevated transition-all">
+      <div className="relative aspect-video rounded-2xl overflow-hidden bg-bg-base shadow-card group-hover:shadow-elevated transition-all">
         <img src={stream.thumbnail} alt={stream.title} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
         {stream.duration && (
           <div className="absolute bottom-2 right-2 bg-black/75 text-white text-[11px] px-2 py-0.5 rounded-md font-semibold">
@@ -229,7 +229,7 @@ export function StreamCard({ stream, large = false }: { stream: Stream; large?: 
           </div>
         )}
         <div className="absolute inset-0 flex items-center justify-center bg-black/0 group-hover:bg-black/20 transition-colors">
-          <div className="w-12 h-12 rounded-full bg-white/20 backdrop-blur-md border border-white/30 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
+          <div className="w-12 h-12 rounded-full bg-bg-surface/20 backdrop-blur-md border border-white/30 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
             <Play size={20} className="text-white ml-0.5" fill="white" />
           </div>
         </div>

@@ -30,9 +30,9 @@ export default function Shop() {
             <p className="text-white/80 text-xs font-semibold uppercase tracking-widest">Geprüft von Max Hopp</p>
             <h1 className="text-3xl font-black text-white tracking-tight mt-1">Shop vom Hopp</h1>
           </div>
-          <button className="relative w-12 h-12 rounded-full bg-white/20 backdrop-blur flex items-center justify-center transition hover:bg-white/30 active:scale-95">
+          <button className="relative w-12 h-12 rounded-full bg-bg-surface/20 backdrop-blur flex items-center justify-center transition hover:bg-bg-surface/30 active:scale-95">
             <ShoppingCart size={22} className="text-white" strokeWidth={2.5} />
-            <span className="absolute -top-1 -right-1 w-5 h-5 rounded-full bg-ink text-white text-[10px] font-bold flex items-center justify-center ring-2 ring-orange">
+            <span className="absolute -top-1 -right-1 w-5 h-5 rounded-full bg-bg-base text-white text-[10px] font-bold flex items-center justify-center ring-2 ring-orange">
               3
             </span>
           </button>
@@ -46,8 +46,8 @@ export default function Shop() {
               onClick={() => setActive(c.key)}
               className={`px-5 py-2 rounded-pill text-sm font-bold transition active:scale-95 whitespace-nowrap ${
                 active === c.key
-                  ? "bg-white text-orange shadow-lg"
-                  : "bg-white/20 text-white backdrop-blur"
+                  ? "bg-bg-surface text-orange shadow-lg"
+                  : "bg-bg-surface/20 text-white backdrop-blur"
               }`}
             >
               {c.label}

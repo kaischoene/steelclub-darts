@@ -22,7 +22,7 @@ export default function Ligen() {
       </div>
 
       {/* TAB NAV */}
-      <div className="mt-5 border-b border-black/[0.06] sticky top-16 bg-white/95 backdrop-blur-xl z-20">
+      <div className="mt-5 border-b border-white/10 sticky top-16 bg-bg-surface/95 backdrop-blur-xl z-20">
         <div className="flex overflow-x-auto scroll-hide px-4">
           {ligaTabs.map((l) => (
             <button
@@ -64,14 +64,14 @@ export default function Ligen() {
               className={`grid grid-cols-[40px_1fr_auto] items-center gap-3 px-4 py-3 rounded-2xl transition hover:-translate-y-0.5 ${
                 isMe
                   ? "bg-orange text-white shadow-orange"
-                  : "bg-white border border-black/[0.06] shadow-soft hover:shadow-card"
+                  : "bg-bg-surface border border-white/10 shadow-soft hover:shadow-card"
               }`}
             >
               <div className="flex items-center gap-2">
                 {p.rank <= 3 ? (
                   <Trophy
                     size={18}
-                    className={p.rank === 1 ? "text-yellow-500" : p.rank === 2 ? "text-ink-light" : "text-amber-700"}
+                    className={p.rank === 1 ? "text-yellow-400" : p.rank === 2 ? "text-ink-light" : "text-amber-500"}
                     fill={isMe ? "white" : "currentColor"}
                   />
                 ) : (
@@ -100,7 +100,7 @@ export default function Ligen() {
       <div className="px-4 mt-6">
         <div className="bg-gradient-to-br from-orange/10 to-orange/5 rounded-3xl p-5 border border-orange/20">
           <div className="flex items-start gap-3">
-            <div className="w-11 h-11 rounded-xl bg-orange/15 flex items-center justify-center flex-shrink-0">
+            <div className="w-11 h-11 rounded-xl bg-purple/15 flex items-center justify-center flex-shrink-0">
               <TrendingUp size={22} className="text-orange" strokeWidth={2.5} />
             </div>
             <div className="flex-1">

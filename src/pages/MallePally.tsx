@@ -56,11 +56,11 @@ export default function MallePally() {
         <div className="absolute top-0 left-0 right-0 flex items-center justify-between p-4 pt-6">
           <button
             onClick={() => window.history.back()}
-            className="w-10 h-10 rounded-full bg-white/90 backdrop-blur flex items-center justify-center shadow-soft"
+            className="w-10 h-10 rounded-full bg-bg-surface/90 backdrop-blur flex items-center justify-center shadow-soft"
           >
             <ChevronLeft size={20} className="text-ink" strokeWidth={2.5} />
           </button>
-          <button className="w-10 h-10 rounded-full bg-white/90 backdrop-blur flex items-center justify-center shadow-soft">
+          <button className="w-10 h-10 rounded-full bg-bg-surface/90 backdrop-blur flex items-center justify-center shadow-soft">
             <Share2 size={18} className="text-ink" />
           </button>
         </div>
@@ -74,7 +74,7 @@ export default function MallePally() {
 
       {/* COUNTDOWN */}
       <section className="px-4 -mt-10 relative z-10">
-        <div className="bg-white rounded-3xl shadow-elevated p-6 text-center border border-black/[0.04]">
+        <div className="bg-bg-surface rounded-3xl shadow-elevated p-6 text-center border border-white/[0.05]">
           <p className="text-xs uppercase tracking-widest text-ink-mid font-semibold">Noch</p>
           <div className="my-3">
             <span className="text-7xl font-black text-orange tracking-tighter tabular">{days}</span>
@@ -94,7 +94,7 @@ export default function MallePally() {
       {/* DESCRIPTION */}
       <section className="px-4 mt-6">
         <p className="text-sm text-ink-soft leading-relaxed">
-          Das größte Darts-Event für 200 Spieler, mit exklusiven Special Guests und einer unvergesslichen Partyatmosphäre direkt im Bierkönig auf Mallorca. Ein Highlight für alle Darts-Fans der Steel Club Community.
+          Das größte Darts-Event für 200 Spieler, mit exklusiven Special Guests und einer unvergesslichen Partyatmosphäre direkt im Bierkönig auf Mallorca. Ein Highlight für alle Darts-Fans der Icon Community.
         </p>
       </section>
 
@@ -103,11 +103,11 @@ export default function MallePally() {
         <h2 className="text-lg font-black text-ink tracking-tight mb-3">Live Tournament</h2>
         <div className="space-y-3">
           {groups.map((g) => (
-            <div key={g.label} className="bg-white border border-black/[0.06] rounded-2xl shadow-soft overflow-hidden">
-              <div className="px-4 py-2.5 bg-orange/10 border-b border-orange/20">
+            <div key={g.label} className="bg-bg-surface border border-white/10 rounded-2xl shadow-soft overflow-hidden">
+              <div className="px-4 py-2.5 bg-purple/15 border-b border-orange/20">
                 <h3 className="font-bold text-sm text-ink">{g.label}</h3>
               </div>
-              <div className="divide-y divide-black/[0.04]">
+              <div className="divide-y divide-white/[0.05]">
                 {g.matches.map((m, i) => (
                   <div key={i} className="flex items-center justify-between px-4 py-3 text-sm">
                     <span className={`font-semibold flex-1 ${m.s1 > m.s2 ? "text-ink" : "text-ink-mid"}`}>{m.p1}</span>
@@ -126,7 +126,7 @@ export default function MallePally() {
       </section>
 
       {/* CTA — sits ABOVE the BottomNav */}
-      <div className="fixed left-0 right-0 bg-white p-4 border-t border-black/[0.06] shadow-elevated z-40" style={{ bottom: 'calc(72px + env(safe-area-inset-bottom, 0px))' }}>
+      <div className="fixed left-0 right-0 bg-bg-surface p-4 border-t border-white/10 shadow-elevated z-40" style={{ bottom: 'calc(72px + env(safe-area-inset-bottom, 0px))' }}>
         <button className="w-full bg-orange hover:bg-orange-bright text-white font-bold py-4 rounded-pill shadow-orange-strong transition active:scale-95">
           Jetzt anmelden
         </button>
@@ -139,7 +139,7 @@ export default function MallePally() {
 
 function MetaCard({ icon, label, value }: { icon: React.ReactNode; label: string; value: string }) {
   return (
-    <div className="bg-white border border-black/[0.06] rounded-2xl p-3 text-center shadow-soft">
+    <div className="bg-bg-surface border border-white/10 rounded-2xl p-3 text-center shadow-soft">
       <div className="flex justify-center mb-1.5">{icon}</div>
       <p className="text-xs text-ink-mid font-medium">{label}</p>
       <p className="text-lg font-black text-ink mt-0.5 tabular">{value}</p>

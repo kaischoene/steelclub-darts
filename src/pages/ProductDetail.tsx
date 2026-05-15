@@ -33,11 +33,11 @@ export default function ProductDetail() {
         <div className="absolute top-0 left-0 right-0 flex items-center justify-between p-4 pt-6">
           <button
             onClick={() => window.history.back()}
-            className="w-10 h-10 rounded-full bg-white/90 backdrop-blur flex items-center justify-center shadow-soft active:scale-95"
+            className="w-10 h-10 rounded-full bg-bg-surface/90 backdrop-blur flex items-center justify-center shadow-soft active:scale-95"
           >
             <ChevronLeft size={20} className="text-ink" strokeWidth={2.5} />
           </button>
-          <button className="w-10 h-10 rounded-full bg-white/90 backdrop-blur flex items-center justify-center shadow-soft">
+          <button className="w-10 h-10 rounded-full bg-bg-surface/90 backdrop-blur flex items-center justify-center shadow-soft">
             <Heart size={18} className="text-ink" />
           </button>
         </div>
@@ -90,13 +90,13 @@ export default function ProductDetail() {
       <section className="px-4 mt-6">
         <div className="bg-surface-gray rounded-2xl p-4 space-y-2.5">
           <div className="flex items-center gap-3 text-sm">
-            <div className="w-9 h-9 rounded-full bg-white flex items-center justify-center">
+            <div className="w-9 h-9 rounded-full bg-bg-surface flex items-center justify-center">
               <Truck size={16} className="text-orange" />
             </div>
             <span className="text-ink-soft">Versandkostenfrei ab 50 €</span>
           </div>
           <div className="flex items-center gap-3 text-sm">
-            <div className="w-9 h-9 rounded-full bg-white flex items-center justify-center">
+            <div className="w-9 h-9 rounded-full bg-bg-surface flex items-center justify-center">
               <ShieldCheck size={16} className="text-orange" />
             </div>
             <span className="text-ink-soft">30 Tage Rückgaberecht</span>
@@ -115,7 +115,7 @@ export default function ProductDetail() {
       </section>
 
       {/* STICKY CTA — sits ABOVE the BottomNav */}
-      <div className="fixed left-0 right-0 bg-white border-t border-black/[0.06] p-4 z-40 shadow-elevated" style={{ bottom: 'calc(72px + env(safe-area-inset-bottom, 0px))' }}>
+      <div className="fixed left-0 right-0 bg-bg-surface border-t border-white/10 p-4 z-40 shadow-elevated" style={{ bottom: 'calc(72px + env(safe-area-inset-bottom, 0px))' }}>
         <div className="max-w-screen-lg mx-auto flex items-center gap-3">
           <div className="flex items-center bg-surface-gray rounded-pill p-1">
             <button onClick={() => setQty(Math.max(1, qty - 1))} className="w-9 h-9 flex items-center justify-center active:scale-95">

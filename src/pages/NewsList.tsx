@@ -16,7 +16,7 @@ export default function NewsList() {
 
       <div className="px-4 mt-2">
         <h1 className="text-3xl font-black text-ink tracking-tight">News & Stories</h1>
-        <p className="text-sm text-ink-mid mt-1">Aktuelles aus der Welt von Steel Club Darts</p>
+        <p className="text-sm text-ink-mid mt-1">Aktuelles aus der Welt von THE ICON DARTS</p>
       </div>
 
       <div className="flex gap-2 overflow-x-auto scroll-hide mt-5 px-4 pb-2">
@@ -25,7 +25,7 @@ export default function NewsList() {
             key={c}
             onClick={() => setCat(c)}
             className={`px-4 py-2 rounded-pill text-sm font-semibold whitespace-nowrap transition active:scale-95 ${
-              cat === c ? "bg-orange text-white shadow-orange" : "bg-white border border-black/[0.08] text-ink"
+              cat === c ? "bg-orange text-white shadow-orange" : "bg-bg-surface border border-white/10 text-ink"
             }`}
           >
             {c}

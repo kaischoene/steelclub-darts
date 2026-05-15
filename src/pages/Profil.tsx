@@ -39,8 +39,8 @@ export default function Profil() {
       {/* AVATAR HERO */}
       <section className="px-4 pt-4 pb-2">
         <div className="bg-gradient-to-br from-orange to-orange-dark rounded-3xl p-6 text-white shadow-orange-strong relative overflow-hidden">
-          <div className="absolute -right-12 -top-12 w-40 h-40 rounded-full bg-white/10 blur-3xl" />
-          <div className="absolute -right-4 -bottom-12 w-32 h-32 rounded-full bg-white/15 blur-2xl" />
+          <div className="absolute -right-12 -top-12 w-40 h-40 rounded-full bg-bg-surface/10 blur-3xl" />
+          <div className="absolute -right-4 -bottom-12 w-32 h-32 rounded-full bg-bg-surface/15 blur-2xl" />
           <div className="relative flex items-center gap-4">
             <div className="w-20 h-20 rounded-full ring-4 ring-white/40 overflow-hidden shadow-2xl">
               <img
@@ -71,14 +71,14 @@ export default function Profil() {
       {menuGroups.map((g) => (
         <section key={g.title} className="mt-6 px-4">
           <p className="text-xs text-ink-mid uppercase tracking-wider font-bold mb-2 ml-1">{g.title}</p>
-          <div className="bg-white border border-black/[0.06] rounded-2xl shadow-soft divide-y divide-black/[0.04] overflow-hidden">
+          <div className="bg-bg-surface border border-white/10 rounded-2xl shadow-soft divide-y divide-white/[0.05] overflow-hidden">
             {g.items.map((item) => (
               <Link
                 key={item.label}
                 to={item.path}
                 className="flex items-center gap-3 px-4 py-3.5 hover:bg-surface-gray transition"
               >
-                <div className="w-9 h-9 rounded-xl bg-orange/10 flex items-center justify-center">
+                <div className="w-9 h-9 rounded-xl bg-purple/15 flex items-center justify-center">
                   <item.icon size={18} className="text-orange" strokeWidth={2.5} />
                 </div>
                 <span className="flex-1 font-semibold text-ink text-sm">{item.label}</span>
@@ -90,7 +90,7 @@ export default function Profil() {
       ))}
 
       <section className="mt-6 px-4">
-        <button className="w-full bg-white border border-black/[0.06] rounded-2xl shadow-soft py-4 flex items-center justify-center gap-2 text-live font-bold transition hover:bg-live/5 active:scale-95">
+        <button className="w-full bg-bg-surface border border-white/10 rounded-2xl shadow-soft py-4 flex items-center justify-center gap-2 text-live font-bold transition hover:bg-live/5 active:scale-95">
           <LogOut size={18} />
           Abmelden
         </button>

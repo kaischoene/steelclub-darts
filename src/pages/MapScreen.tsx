@@ -26,7 +26,7 @@ export default function MapScreen() {
     <AppShell>
       <div className="h-screen flex flex-col">
         {/* Top Search Bar */}
-        <div className="px-4 pt-4 pb-2 bg-white z-30 relative">
+        <div className="px-4 pt-4 pb-2 bg-bg-surface z-30 relative">
           <div className="flex items-center gap-2">
             <div className="flex-1 relative">
               <Search size={18} className="absolute left-4 top-1/2 -translate-y-1/2 text-ink-mid" />
@@ -41,7 +41,7 @@ export default function MapScreen() {
             <button
               onClick={() => setShowFilters(!showFilters)}
               className={`relative w-12 h-12 rounded-2xl flex items-center justify-center transition-all active:scale-95 ${
-                showFilters ? "bg-orange text-white shadow-orange" : "bg-white border border-black/[0.08] shadow-soft"
+                showFilters ? "bg-orange text-white shadow-orange" : "bg-bg-surface border border-white/10 shadow-soft"
               }`}
             >
               <SlidersHorizontal size={20} strokeWidth={2.5} className={showFilters ? "text-white" : "text-ink"} />
@@ -59,7 +59,7 @@ export default function MapScreen() {
                   className={`px-4 py-2 rounded-pill text-sm font-semibold whitespace-nowrap transition active:scale-95 ${
                     filter === f
                       ? "bg-orange text-white shadow-orange"
-                      : "bg-white border border-black/[0.08] text-ink"
+                      : "bg-bg-surface border border-white/10 text-ink"
                   }`}
                 >
                   {f}
@@ -79,7 +79,7 @@ export default function MapScreen() {
             attributionControl={false}
             style={{ width: "100%", height: "100%" }}
           >
-            <TileLayer url="https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png" />
+            <TileLayer url="https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png" />
             {filtered.map((event) => (
               <Marker
                 key={event.id}
@@ -94,7 +94,7 @@ export default function MapScreen() {
 
           {/* Bottom Sheet */}
           {selected && (
-            <div className="absolute bottom-0 left-0 right-0 bg-white rounded-t-3xl shadow-elevated z-[450] animate-fade-up border-t border-black/[0.06]">
+            <div className="absolute bottom-0 left-0 right-0 bg-bg-surface rounded-t-3xl shadow-elevated z-[450] animate-fade-up border-t border-white/10">
               <div className="flex justify-center pt-2">
                 <div className="w-10 h-1 rounded-full bg-ink-light" />
               </div>

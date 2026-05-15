@@ -40,10 +40,10 @@ export const streams: Stream[] = [
   },
   {
     id: 2,
-    slug: "steel-club-championship-halbfinale",
-    title: "Steel Club Championship – Halbfinale",
+    slug: "icon-darts-championship-halbfinale",
+    title: "Icon Championship – Halbfinale",
     subtitle: "Max Hopp vs Gabriel Clemens",
-    thumbnail: img("steel-club-championship-halbfinale"),
+    thumbnail: img("icon-darts-championship-halbfinale"),
     isLive: true,
     viewerCount: "8.2K",
     category: "live",

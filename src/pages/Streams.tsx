@@ -55,7 +55,7 @@ export default function Streams() {
       <section className="mt-8">
         <div className="px-4 mb-3">
           <h2 className="text-xl font-black text-ink tracking-tight">Creator-Content</h2>
-          <p className="text-xs text-ink-mid mt-0.5">Aus dem Steelclub Media-Room Heiligenroth</p>
+          <p className="text-xs text-ink-mid mt-0.5">Aus dem Icon Media-Room Heiligenroth</p>
         </div>
         <div className="flex gap-3 overflow-x-auto scroll-hide snap-x scroll-pl-4 scroll-pr-4 px-4 pb-2">
           {creator.map((s) => (
@@ -66,11 +66,11 @@ export default function Streams() {
 
       {/* MEDIA ROOM CTA */}
       <section className="px-4 mt-8">
-        <div className="relative overflow-hidden rounded-3xl bg-ink p-6 text-white">
-          <div className="absolute -right-12 -top-12 w-56 h-56 rounded-full bg-orange/20 blur-3xl" />
+        <div className="relative overflow-hidden rounded-3xl bg-bg-base p-6 text-white">
+          <div className="absolute -right-12 -top-12 w-56 h-56 rounded-full bg-purple/25 blur-3xl" />
           <div className="absolute -right-4 -bottom-12 w-40 h-40 rounded-full bg-orange/30 blur-3xl" />
           <div className="relative">
-            <h3 className="text-2xl font-black tracking-tight">Steelclub Media-Room</h3>
+            <h3 className="text-2xl font-black tracking-tight">Icon Media-Room</h3>
             <p className="text-sm text-white/70 mt-1 max-w-[80%]">
               Professionelle Streaming-Anlage mit 5 Boards, Lichtringen und automatischem Zählsystem in Heiligenroth.
             </p>
