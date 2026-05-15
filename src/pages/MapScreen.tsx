@@ -23,8 +23,8 @@ export default function MapScreen() {
   });
 
   return (
-    <AppShell>
-      <div className="h-screen flex flex-col">
+    <AppShell fullHeight>
+      <div className="flex flex-col" style={{ height: 'calc(100dvh - 72px - env(safe-area-inset-bottom, 0px))' }}>
         {/* Top Search Bar */}
         <div className="px-4 pt-4 pb-2 bg-bg-surface z-30 relative">
           <div className="flex items-center gap-2">
