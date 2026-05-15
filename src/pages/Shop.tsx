@@ -39,7 +39,7 @@ export default function Shop() {
         </div>
 
         {/* Category Pills */}
-        <div className="flex gap-2 px-4 pb-5 overflow-x-auto scroll-hide">
+        <div className="relative flex gap-2 px-4 pb-5 overflow-x-auto scroll-hide">
           {categories.map((c) => (
             <button
               key={c.key}
