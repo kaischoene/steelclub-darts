@@ -14,7 +14,6 @@ export interface DartEvent {
   image: string;
   heroImage: string;
   league: LigaLevel;
-  pinColor: "orange" | "gold" | "gray";
   participants: string[];
   prizeMoney: number;
   description: string;
@@ -24,6 +23,22 @@ export interface DartEvent {
 }
 
 const img = (slug: string) => `/img/events/${slug}.jpg`;
+
+export type PinColor = "purple" | "blue" | "gray";
+
+export function pinColorForLeague(league: LigaLevel): PinColor {
+  switch (league) {
+    case "Profi":
+      return "purple";
+    case "A-Klasse":
+      return "blue";
+    case "B-Klasse":
+    case "C-Klasse":
+    case "NDL":
+    default:
+      return "gray";
+  }
+}
 
 export const events: DartEvent[] = [
   {
@@ -39,7 +54,6 @@ export const events: DartEvent[] = [
     image: img("malle-pally-2026"),
     heroImage: img("malle-pally-2026"),
     league: "Profi",
-    pinColor: "orange",
     participants: ["max-hopp", "michael-van-gerwen", "peter-wright", "gerwyn-price", "jonny-clayton", "joe-cullen"],
     prizeMoney: 200000,
     description: "Das größte Darts-Event für 200 Spieler, mit exklusiven Special Guests und einer unvergesslichen Partyatmosphäre direkt im Bierkönig.",
@@ -60,7 +74,6 @@ export const events: DartEvent[] = [
     image: img("icon-darts-open-2026"),
     heroImage: img("icon-darts-open-2026"),
     league: "Profi",
-    pinColor: "orange",
     participants: ["maximilian-mueller", "lisa-koenig", "david-bauer", "sarah-weber", "tom-schneider", "max-hopp"],
     prizeMoney: 50000,
     description: "Das Flaggschiff-Event der THE ICON DARTS Liga in Berlin. Hochkarätige Spieler aus ganz Deutschland kämpfen um den Open-Titel.",
@@ -80,7 +93,6 @@ export const events: DartEvent[] = [
     image: img("lokales-darts-turnier-berlin"),
     heroImage: img("lokales-darts-turnier-berlin"),
     league: "C-Klasse",
-    pinColor: "gray",
     participants: ["tom-schneider", "sarah-weber", "david-bauer"],
     prizeMoney: 1500,
     description: "Lokales Einsteiger-Turnier für die Berliner Dart-Community.",
@@ -99,7 +111,6 @@ export const events: DartEvent[] = [
     image: img("dart-liga-start-hamburg"),
     heroImage: img("dart-liga-start-hamburg"),
     league: "B-Klasse",
-    pinColor: "gold",
     participants: ["lisa-koenig", "sarah-weber"],
     prizeMoney: 3500,
     description: "Saison-Auftakt der Hamburger B-Klasse Dartliga.",
@@ -118,7 +129,6 @@ export const events: DartEvent[] = [
     image: img("malle-pally-qualifier-koeln"),
     heroImage: img("malle-pally-qualifier-koeln"),
     league: "A-Klasse",
-    pinColor: "gold",
     participants: ["maximilian-mueller", "lisa-koenig"],
     prizeMoney: 8000,
     description: "Qualifikations-Turnier für das Malle Pally. Die Top 4 sichern sich ein Ticket nach Mallorca.",
@@ -137,7 +147,6 @@ export const events: DartEvent[] = [
     image: img("muenchner-meisterschaft"),
     heroImage: img("muenchner-meisterschaft"),
     league: "Profi",
-    pinColor: "orange",
     participants: ["max-hopp", "gabriel-clemens"],
     prizeMoney: 25000,
     description: "Bayerische Landesmeisterschaft im Steel-Dart.",
@@ -156,7 +165,6 @@ export const events: DartEvent[] = [
     image: img("frankfurt-open"),
     heroImage: img("frankfurt-open"),
     league: "A-Klasse",
-    pinColor: "gold",
     participants: ["maximilian-mueller", "lisa-koenig", "max-hopp"],
     prizeMoney: 12000,
     description: "Eines der größten Dart-Turniere im Rhein-Main-Gebiet.",
@@ -175,7 +183,6 @@ export const events: DartEvent[] = [
     image: img("stuttgart-cup"),
     heroImage: img("stuttgart-cup"),
     league: "B-Klasse",
-    pinColor: "gold",
     participants: ["david-bauer", "tom-schneider"],
     prizeMoney: 4500,
     description: "Schwäbische Dart-Meisterschaft.",
@@ -194,7 +201,6 @@ export const events: DartEvent[] = [
     image: img("leipzig-classic"),
     heroImage: img("leipzig-classic"),
     league: "B-Klasse",
-    pinColor: "gold",
     participants: ["sarah-weber", "david-bauer"],
     prizeMoney: 3800,
     description: "Traditioneller Dart-Cup im Osten Deutschlands.",
@@ -213,7 +219,6 @@ export const events: DartEvent[] = [
     image: img("duesseldorf-darts-day"),
     heroImage: img("duesseldorf-darts-day"),
     league: "C-Klasse",
-    pinColor: "gray",
     participants: ["tom-schneider"],
     prizeMoney: 800,
     description: "Lokales Hobbyspieler-Turnier mit Festival-Charakter.",
@@ -232,7 +237,6 @@ export const events: DartEvent[] = [
     image: img("bremen-grand-prix"),
     heroImage: img("bremen-grand-prix"),
     league: "A-Klasse",
-    pinColor: "gold",
     participants: ["maximilian-mueller", "lisa-koenig"],
     prizeMoney: 9500,
     description: "Hochklassiges Dart-Turnier in der Hansestadt.",
@@ -251,7 +255,6 @@ export const events: DartEvent[] = [
     image: img("dortmund-derby"),
     heroImage: img("dortmund-derby"),
     league: "B-Klasse",
-    pinColor: "gold",
     participants: ["david-bauer", "sarah-weber"],
     prizeMoney: 3000,
     description: "Pre-Christmas Dart Showdown im Ruhrgebiet.",
@@ -270,7 +273,6 @@ export const events: DartEvent[] = [
     image: img("nuernberg-cup"),
     heroImage: img("nuernberg-cup"),
     league: "A-Klasse",
-    pinColor: "gold",
     participants: ["maximilian-mueller"],
     prizeMoney: 7500,
     description: "Fränkische Dart-Tradition trifft auf modernes Turnierformat.",
@@ -289,7 +291,6 @@ export const events: DartEvent[] = [
     image: img("dresden-open"),
     heroImage: img("dresden-open"),
     league: "C-Klasse",
-    pinColor: "gray",
     participants: ["tom-schneider"],
     prizeMoney: 1200,
     description: "Einsteigerfreundliches Turnier im Osten Deutschlands.",
@@ -308,7 +309,6 @@ export const events: DartEvent[] = [
     image: img("essen-pokal"),
     heroImage: img("essen-pokal"),
     league: "Profi",
-    pinColor: "orange",
     participants: ["max-hopp", "gabriel-clemens"],
     prizeMoney: 18000,
     description: "Premium-Pokal mit Top-Spielern aus ganz Deutschland.",

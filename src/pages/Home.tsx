@@ -3,7 +3,7 @@ import { ChevronRight, Target, Users as UsersIcon, Radio as RadioIcon, ArrowRigh
 import { AppShell } from "../components/AppShell";
 import { TopBar } from "../components/TopBar";
 import { EventCard, PlayerCard, NewsCard, ProductCard, StreamCard, LiveDot } from "../components/Cards";
-import { events } from "../data/events";
+import { events, pinColorForLeague } from "../data/events";
 import { players } from "../data/players";
 import { news } from "../data/news";
 import { products } from "../data/products";
@@ -167,7 +167,7 @@ export default function Home() {
               <Marker
                 key={event.id}
                 position={[event.lat, event.lng]}
-                icon={makeDartPin(event.pinColor, event.isFeatured)}
+                icon={makeDartPin(pinColorForLeague(event.league), event.isFeatured)}
               >
                 <Popup>
                   <div className="text-sm">

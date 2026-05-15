@@ -4,7 +4,7 @@ import { Search, SlidersHorizontal, MapPin, X, Calendar } from "lucide-react";
 import { MapContainer, TileLayer, Marker } from "react-leaflet";
 import "leaflet/dist/leaflet.css";
 import { AppShell } from "../components/AppShell";
-import { events, type DartEvent } from "../data/events";
+import { events, pinColorForLeague, type DartEvent } from "../data/events";
 import { makeDartPin } from "../components/MapPin";
 import { LeagueBadge } from "../components/Cards";
 
@@ -84,7 +84,7 @@ export default function MapScreen() {
               <Marker
                 key={event.id}
                 position={[event.lat, event.lng]}
-                icon={makeDartPin(event.pinColor, event.isFeatured)}
+                icon={makeDartPin(pinColorForLeague(event.league), event.isFeatured)}
                 eventHandlers={{
                   click: () => setSelected(event),
                 }}

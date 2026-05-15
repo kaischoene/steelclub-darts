@@ -1,12 +1,13 @@
 import L from "leaflet";
+import type { PinColor } from "../data/events";
 
-const colorMap: Record<string, string> = {
-  orange: "#A855F7",  // primary purple (was orange / featured)
-  gold: "#3B82F6",    // electric blue (was gold / A-Klasse)
-  gray: "#6B6481",    // muted purple-gray (was gray / lower divisions)
+const colorMap: Record<PinColor, string> = {
+  purple: "#A855F7",
+  blue: "#3B82F6",
+  gray: "#6B6481",
 };
 
-export function makeDartPin(color: "orange" | "gold" | "gray" = "orange", isFeatured = false) {
+export function makeDartPin(color: PinColor = "purple", isFeatured = false) {
   const fill = colorMap[color];
   const size = isFeatured ? 44 : 36;
   const h = isFeatured ? 54 : 44;
