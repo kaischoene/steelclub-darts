@@ -21,7 +21,7 @@ export function TopBar({ showBack = false, title, rightSlot, transparent = false
           : "bg-bg-surface/85 backdrop-blur-xl border-b border-white/10"
       }`}
     >
-      <div className="flex items-center justify-between h-28 px-4 max-w-screen-lg mx-auto">
+      <div className="flex items-center justify-between h-20 px-4 max-w-screen-lg mx-auto">
         <div className="flex items-center gap-3 min-w-0 flex-1">
           {showBack ? (
             <button

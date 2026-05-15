@@ -33,7 +33,7 @@ export default function Home() {
       <TopBar />
 
       {/* HERO CAROUSEL */}
-      <section className="px-4 mt-3">
+      <section className="px-4 mt-6">
         <div className="relative aspect-[16/10] rounded-3xl overflow-hidden shadow-elevated">
           {featuredEvents.map((event, i) => (
             <Link
