@@ -66,15 +66,23 @@ export default function Streams() {
 
       {/* MEDIA ROOM CTA */}
       <section className="px-4 mt-8">
-        <div className="relative overflow-hidden rounded-3xl bg-bg-base p-6 text-white">
-          <div className="absolute -right-12 -top-12 w-56 h-56 rounded-full bg-purple/25 blur-3xl" />
-          <div className="absolute -right-4 -bottom-12 w-40 h-40 rounded-full bg-orange/30 blur-3xl" />
-          <div className="relative">
-            <h3 className="text-2xl font-black tracking-tight">Icon Media-Room</h3>
-            <p className="text-sm text-white/70 mt-1 max-w-[80%]">
-              Professionelle Streaming-Anlage mit 5 Boards, Lichtringen und automatischem Zählsystem in Heiligenroth.
+        <div className="relative overflow-hidden rounded-3xl text-white min-h-[220px] shadow-elevated">
+          <img
+            src="/img/misc/media-room-bg.jpg"
+            alt="ICON Media Room"
+            className="absolute inset-0 w-full h-full object-cover"
+          />
+          <div className="absolute inset-0 bg-gradient-to-r from-black via-black/70 to-black/30" />
+          <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent" />
+          <div className="relative p-6 flex flex-col justify-end h-full min-h-[220px]">
+            <span className="inline-flex self-start items-center px-2.5 py-1 rounded-pill bg-purple/30 backdrop-blur border border-purple/40 text-white text-[10px] font-bold uppercase tracking-wider mb-3">
+              Heiligenroth
+            </span>
+            <h3 className="text-2xl font-black tracking-tight">ICON Media-Room</h3>
+            <p className="text-sm text-white/80 mt-1 max-w-[85%]">
+              Professionelle Streaming-Anlage mit 5 Boards, Lichtringen und automatischem Zählsystem.
             </p>
-            <button className="mt-4 bg-orange hover:bg-orange-bright text-white font-semibold text-sm px-5 py-2.5 rounded-pill shadow-orange transition active:scale-95">
+            <button className="mt-4 self-start bg-orange hover:bg-orange-bright text-white font-semibold text-sm px-5 py-2.5 rounded-pill shadow-orange transition active:scale-95">
               Mehr erfahren
             </button>
           </div>
