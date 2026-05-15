@@ -111,8 +111,8 @@ export default function Ligen() {
         </div>
       </div>
 
-      {/* STICKY CTA */}
-      <div className="sticky bottom-24 px-4 mt-6 pb-2">
+      {/* CTA at bottom of content */}
+      <div className="px-4 mt-8 mb-4">
         <button className="w-full bg-orange hover:bg-orange-bright text-white font-bold py-4 rounded-pill shadow-orange-strong transition active:scale-95">
           Turnier anmelden
         </button>

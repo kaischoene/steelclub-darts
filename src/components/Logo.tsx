@@ -13,7 +13,7 @@ export function Logo({ variant = "full", className = "" }: LogoProps) {
   const heights: Record<Exclude<LogoVariant, "icon">, string> = {
     full: "h-36",
     stacked: "h-32",
-    "horizontal-small": "h-12",
+    "horizontal-small": "h-20",
     white: "h-20",
   };
 

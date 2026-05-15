@@ -185,15 +185,15 @@ export default function Home() {
           {/* Legend overlay */}
           <div className="absolute top-3 left-3 bg-bg-surface/95 backdrop-blur-md rounded-2xl shadow-card p-3 border border-white/10">
             <div className="flex items-center gap-1.5 text-[10px] mb-1.5">
-              <span className="w-2.5 h-2.5 rounded-full bg-orange" />
+              <span className="w-2.5 h-2.5 rounded-full bg-purple" />
               <span className="font-semibold text-ink">Profi</span>
             </div>
             <div className="flex items-center gap-1.5 text-[10px] mb-1.5">
-              <span className="w-2.5 h-2.5 rounded-full bg-amber-400" />
+              <span className="w-2.5 h-2.5 rounded-full bg-electric" />
               <span className="font-semibold text-ink">A-Klasse</span>
             </div>
             <div className="flex items-center gap-1.5 text-[10px]">
-              <span className="w-2.5 h-2.5 rounded-full bg-ink-mid" />
+              <span className="w-2.5 h-2.5 rounded-full bg-ink-light" />
               <span className="font-semibold text-ink">B/C-Klasse</span>
             </div>
           </div>
@@ -217,7 +217,7 @@ export default function Home() {
             Alle <ChevronRight size={16} />
           </Link>
         </div>
-        <div className="flex gap-5 overflow-x-auto scroll-hide snap-x scroll-pl-4 scroll-pr-4 px-4 pb-2">
+        <div className="flex gap-5 overflow-x-auto scroll-hide snap-x scroll-pl-4 scroll-pr-4 px-4 py-3">
           {featuredPlayers.map((p) => (
             <PlayerCard key={p.id} player={p} />
           ))}
