@@ -18,7 +18,7 @@ export function LiveDot({ className = "" }: { className?: string }) {
 export function LeagueBadge({ league }: { league: string }) {
   const colors: Record<string, string> = {
     "Profi": "bg-orange text-white",
-    "A-Klasse": "bg-amber-400 text-white",
+    "A-Klasse": "bg-electric text-white",
     "B-Klasse": "bg-ink-mid text-white",
     "C-Klasse": "bg-ink-light text-white",
     "NDL": "bg-bg-base text-white",
