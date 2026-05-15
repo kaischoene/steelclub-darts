@@ -23,9 +23,9 @@ export default {
         },
         // === BACKGROUNDS (Dark Mode) ===
         bg: {
-          DEFAULT: "#0A0613",        // deepest background, near-black with violet tint
-          base: "#0F0820",           // page background
-          surface: "#160B2C",        // cards
+          DEFAULT: "#000000",        // pure black page background
+          base: "#000000",           // pure black
+          surface: "#160B2C",        // cards (purple-tinted dark surface)
           elevated: "#1E1140",       // elevated cards / modals
           higher: "#2A1856",         // hover surfaces
         },
@@ -46,10 +46,10 @@ export default {
         },
         surface: {
           DEFAULT: "#160B2C",
-          soft: "#0F0820",
+          soft: "#000000",
           gray: "#1E1140",
           gray2: "#2A1856",
-          black: "#0A0613",
+          black: "#000000",
           blacksoft: "#160B2C",
         },
         live: "#FF3B5C",

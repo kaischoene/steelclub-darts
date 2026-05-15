@@ -12,17 +12,11 @@ html, body, #root {
 
 body {
   font-family: 'Inter', system-ui, -apple-system, sans-serif;
-  background: #0A0613;
+  background: #000000;
   color: #FFFFFF;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizeLegibility;
-
-  /* Subtle ambient purple/blue glow background */
-  background-image:
-    radial-gradient(circle at 15% 0%, rgba(168, 85, 247, 0.18), transparent 50%),
-    radial-gradient(circle at 85% 100%, rgba(59, 130, 246, 0.12), transparent 50%);
-  background-attachment: fixed;
 }
 
 * {
@@ -47,7 +41,7 @@ body {
 
 /* Leaflet overrides for dark mode */
 .leaflet-container {
-  background: #0F0820;
+  background: #000000;
   font-family: 'Inter', sans-serif;
 }
 .leaflet-popup-content-wrapper {
