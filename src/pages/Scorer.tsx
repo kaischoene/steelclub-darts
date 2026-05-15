@@ -25,7 +25,7 @@ export default function Scorer() {
       <section className="px-4 mt-5">
         <div className="relative aspect-square bg-bg-base rounded-3xl shadow-elevated overflow-hidden">
           <img
-            src="/img/products/professional-dartboard.jpg"
+            src="/img/products/icon-dartboard.jpg"
             alt="Dartboard"
             className="absolute inset-0 w-full h-full object-cover"
           />
