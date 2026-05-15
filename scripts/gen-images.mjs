@@ -5,7 +5,8 @@ import { join, dirname } from "node:path";
 import { fileURLToPath } from "node:url";
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
-const API_KEY = "1nfsh-6rarhav7k7x92k0xtd5c3090ky";
+const API_KEY = process.env.INFSH_API_KEY;
+if (!API_KEY) { console.error("Set INFSH_API_KEY env var"); process.exit(1); }
 const BASE = "https://api.inference.sh";
 const OUT_DIR = join(__dirname, "..", "public", "img");
 
