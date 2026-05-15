@@ -15,7 +15,7 @@ export function TopBar({ showBack = false, title, rightSlot, transparent = false
 
   return (
     <header
-      className={`sticky top-0 z-40 ${
+      className={`sticky top-0 z-[1000] ${
         transparent
           ? "bg-transparent"
           : "bg-bg-surface/85 backdrop-blur-xl border-b border-white/10"
