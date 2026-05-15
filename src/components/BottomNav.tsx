@@ -29,7 +29,7 @@ export function BottomNav() {
                 <div
                   className={`flex items-center justify-center transition-all duration-200 ${
                     isActive
-                      ? "w-12 h-12 rounded-full bg-orange shadow-[0_8px_20px_rgba(255,122,0,0.4)] -translate-y-3"
+                      ? "w-12 h-12 rounded-full bg-orange shadow-[0_8px_20px_rgba(168,85,247,0.5)] -translate-y-3"
                       : "w-12 h-12 rounded-full"
                   }`}
                 >
