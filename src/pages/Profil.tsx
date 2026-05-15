@@ -51,7 +51,7 @@ export default function Profil() {
             </div>
             <div className="flex-1 min-w-0">
               <p className="text-xs uppercase tracking-widest text-white/70 font-semibold">Mein Profil</p>
-              <h1 className="text-2xl font-black tracking-tight mt-0.5">Kai Schöne</h1>
+              <h1 className="text-2xl font-black tracking-tight mt-0.5">Matthias Distel</h1>
               <p className="text-sm text-white/80 mt-1">🇩🇪 Deutschland · B-Klasse</p>
             </div>
           </div>
