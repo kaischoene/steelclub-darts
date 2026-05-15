@@ -153,7 +153,7 @@ export function ProductCard({ product }: { product: Product }) {
         </button>
         {product.maxHoppRecommended && (
           <div className="absolute inset-x-0 bottom-0 bg-orange text-white text-[10px] font-bold uppercase tracking-wider text-center py-1.5">
-            Von Max empfohlen
+            ICON Pick
           </div>
         )}
       </div>

@@ -242,7 +242,7 @@ export default function Home() {
       {/* SHOP */}
       <section className="mt-8">
         <div className="px-4 flex items-center justify-between mb-4">
-          <h2 className="text-xl font-black text-ink tracking-tight">Shop vom Hopp</h2>
+          <h2 className="text-xl font-black text-ink tracking-tight">ICON Shop</h2>
           <Link to="/shop" className="text-sm font-semibold text-orange flex items-center gap-1 hover:gap-2 transition-all">
             Zum Shop <ChevronRight size={16} />
           </Link>

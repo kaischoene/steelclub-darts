@@ -44,7 +44,7 @@ export default function ProductDetail() {
 
         {product.maxHoppRecommended && (
           <div className="absolute bottom-4 left-4 right-4 bg-orange text-white text-xs font-bold uppercase tracking-wider text-center py-2 rounded-pill shadow-orange">
-            Von Max Hopp empfohlen
+            ICON Pick · Top Empfehlung
           </div>
         )}
       </div>

@@ -27,8 +27,8 @@ export default function Shop() {
         </div>
         <div className="relative px-4 pt-10 pb-6 flex items-end justify-between">
           <div>
-            <p className="text-white/80 text-xs font-semibold uppercase tracking-widest">Geprüft von Max Hopp</p>
-            <h1 className="text-3xl font-black text-white tracking-tight mt-1">Shop vom Hopp</h1>
+            <p className="text-white/80 text-xs font-semibold uppercase tracking-widest">Official Merch & Gear</p>
+            <h1 className="text-3xl font-black text-white tracking-tight mt-1">ICON Shop</h1>
           </div>
           <button className="relative w-12 h-12 rounded-full bg-bg-surface/20 backdrop-blur flex items-center justify-center transition hover:bg-bg-surface/30 active:scale-95">
             <ShoppingCart size={22} className="text-white" strokeWidth={2.5} />
